@@ -13,23 +13,20 @@ jobs:
   build:
     needs: [code]
     runs-on: ubuntu-latest
-    needs: code
     steps:
       - name: Build using Docker
         run: echo "Building using Docker"
 
   test:
-    needs: [bulid]
+    needs: [build]
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: Running test case
         run: echo "Testing the app"
 
   deploy:
-    needs: [bulid,test]
+    needs: [build, test]
     runs-on: ubuntu-latest
-    needs: test
     steps:
       - name: Deploy on the machine
         run: echo "Deploying the code"
