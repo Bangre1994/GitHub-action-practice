@@ -8,17 +8,11 @@ on:
 #job tells what the workfloe should do, there can be one or more than one jobs , hence we write jobs
 #should be inside the workflow
 Jobs:
-  #1st job (give indentation)
+#1st job (give indentation)
   say-hello:
-    #create an ephermal(only for short time) container with ubuntu running)
+#create an ephermal(only for short time) container with ubuntu running)
     run-on: unbuntu-latest
     steps:
       - name: say hello to everyone
         run: echo "Hello Dosto"
-        
-
-#steps
-#should be inside the job
-
-#Actions
-#should be inside the job
+      
