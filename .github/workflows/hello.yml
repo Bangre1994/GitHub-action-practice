@@ -1,17 +1,11 @@
-# workflow( No indentation required for naming the workflow)
-#Should have Name
 name: Hello
-#on tells when the workflow should run(Give indentation)
+
 on:
-  workflow_dispatch: 
-#jobs
-#job tells what the workfloe should do, there can be one or more than one jobs , hence we write jobs
-#should be inside the workflow
-Jobs:
-#1st job (give indentation)
+  workflow_dispatch:
+
+jobs:
   say-hello:
-#create an ephermal(only for short time) container with ubuntu running)
-    run-on: unbuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: say hello to everyone
         run: echo "Hello Dosto"
